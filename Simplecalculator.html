@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculator</title>
+    <style>
+        input {
+  width: 100%;
+}
+.a{
+    position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+.b{
+    position: absolute;
+  content: "";
+  top: 14px;
+  right: 10px;
+  width: 0;
+  height: 0;
+  border: 6px solid transparent;
+  border-color: #fff transparent transparent transparent;
+}
+button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+
+
+
+    </style>
+    <script>
+        function add() {
+  let a1 = parseInt(document.getElementById("a").value);
+  let a2 = parseInt(document.getElementById("b").value);
+  let sum = a1 + a2;
+  document.getElementById("add").innerHTML = "The Addition is: " + sum;
+}
+
+function sub() {
+  let a1 = parseInt(document.getElementById("a").value);
+  let a2 = parseInt(document.getElementById("b").value);
+  let sub = a1 - a2;
+  document.getElementById("sub").innerHTML = "The Subtraction is: " + sub;
+}
+
+function mul() {
+  let a1 = parseInt(document.getElementById("a").value);
+  let a2 = parseInt(document.getElementById("b").value);
+  let mul = a1 * a2;
+  document.getElementById("mul").innerHTML = "The Multiplication is: " + mul;
+}
+
+function div() {
+  let a1 = parseInt(document.getElementById("a").value);
+  let a2 = parseInt(document.getElementById("b").value);
+  let div = a1 / a2;
+  document.getElementById("div").innerHTML = "The Division is: " + div;
+}
+
+function mod() {
+  let a1 = parseInt(document.getElementById("a").value);
+  let a2 = parseInt(document.getElementById("b").value);
+  let mod = a1 % a2;
+  document.getElementById("mod").innerHTML = "The Modulus is: " + mod;
+}
+
+</script>
+</head>
+<body>
+    <h1>This is the Calculator </h1>
+    <label for="a">First Number:</label><br>
+    <input type="text" id="a"><br>
+     <label for="b">Last Number:</label><br>
+     <input type="text" id="b"><br>
+     
+    <button onclick="add()">add</button>
+       <button onclick="sub()">sub</button>
+        <button onclick="mul()">mul</button>
+        <button onclick="div()">div</button>
+       <button onclick="mod()">mod</button>
+    
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="mul"></p>
+    <p id="div"></p>
+    <p id="mod"></p>
+</body>
+</html>

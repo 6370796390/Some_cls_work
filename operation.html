@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        button {
+  background-color: #4CAF50; /* Green */
+  border: none;
+  color: white;
+  padding: 15px 32px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+}
+    </style>
+    <script>
+        let a1 = parseInt(prompt('Enter the 1st number'))
+        let a2 = parseInt(prompt('Enter the second number'))
+        
+        function add(){
+            let add = a1 + a2;
+            document.getElementById("add").innerHTML = "The Addition is: " + add;
+        }
+        
+        function sub(){
+            let sub = a1 - a2;
+            document.getElementById("sub").innerHTML = "The Substraction is: " + sub;
+        }
+        
+        function mul(){
+            let mul = a1 * a2;
+            document.getElementById("mul").innerHTML = "The Multification is: " + mul;
+        }
+        
+        function div(){
+            let div = a1 / a2;
+            document.getElementById("div").innerHTML = "The Division is: " + div;
+        }
+    </script>
+</head>
+<body>
+    <h1>All types of arithmetic operations are performed through the below 4 buttons</h1>
+    <button onclick="add()">add</button>
+    <button onclick="sub()">sub</button>
+    <button onclick="mul()">mul</button>
+    <button onclick="div()">div</button>
+    <p id="add"></p>
+    <p id="sub"></p>
+    <p id="mul"></p>
+    <p id="div"></p>
+</body>
+</html>
